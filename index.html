@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome - Jose Enrique M. Rodriguez</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-container">
+        <div class="overlay"></div>
+    </div>
+
+    <div class="snowflakes" id="snowflakes"></div>
+
+    <div class="container">
+        <header class="header">
+            <h1>THE QUIET MAJESTY OF WINTER</h1>
+            <p class="greeting">Welcome to My HTML Page!</p>
+        </header>
+
+        <nav class="navigation">
+            <ul>
+                <li><a href="Lesson.html">LESSONS</a></li>
+                <li><a href="Resume.html">RESUME</a></li>
+                <li><a href="schedule.html">SCHEDULE</a></li>
+                <li><a href="Galleries.html">GALLERY</a></li>
+                <li><a href="MultiMedia.html">MULTIMEDIA</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+
+        <main class="main-content">
+            <section class="section">
+                <h2>About Me</h2>
+                <p>
+                    I'm <em>Jose Enrique M. Rodriguez</em>, 21 years old, currently residing in <cite>4th Estate, Parañaque City</cite>.
+                    I enjoy playing online games such as <strong>Mobile Legends</strong>, <strong>Valorant</strong>, and various <strong>RPG games</strong>.
+                </p>
+            </section>
+
+            <section class="section">
+                <h2>Recipe: Sinigang na Baboy</h2>
+                <div class="recipe-image">
+                    <img src="/sinigang-na-baboy-480x270.jpg" alt="Sinigang na Baboy">
+                </div>
+                
+                <div class="recipe-section">
+                    <h3 class="recipe-title">Ingredients:</h3>   
+                    <ul class="ingredients-list">
+                        <li>1 kg pork (spare ribs or belly), cut into chunks</li>
+                        <li>2 medium tomatoes, quartered</li>
+                        <li>1 large onion, quartered</li>
+                        <li>2 medium taro (gabi), peeled and cubed</li>
+                        <li>1 radish (labanos), sliced</li>
+                        <li>1 eggplant, sliced</li>
+                        <li>1 bunch kangkong (water spinach)</li>
+                        <li>2–3 pcs green chili (siling haba)</li>
+                        <li>1 pack tamarind soup base (sinigang mix)</li>
+                        <li>Fish sauce (patis) or salt, to taste</li>
+                        <li>6 cups water</li>
+                    </ul>
+                </div>
+
+                <div class="recipe-section">
+                    <h3 class="recipe-title">Instructions:</h3>
+                    <ol class="instructions-list">
+                        <li>In a pot, bring water to a boil and add the pork. Simmer until the meat becomes tender.</li>
+                        <li>Add onions and tomatoes. Cook for 5 minutes.</li>
+                        <li>Add taro and continue simmering until soft.</li>
+                        <li>Add radish, eggplant, and green chili. Cook for another 5 minutes.</li>
+                        <li>Pour in the sinigang mix and season with fish sauce or salt.</li>
+                        <li>Finally, add kangkong leaves and simmer for 2 more minutes.</li>
+                        <li>Serve hot with steamed rice. Enjoy!</li>
+                    </ol>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>My Resume</h2>
+                <ul class="resume-links">
+                    <li><a href="Resume.html#PerInfo">Personal Information</a></li>
+                    <li><a href="Resume.html#EducBack">Educational Background</a></li>
+                    <li><a href="Resume.html#Skillz">Skills</a></li>
+                    <li><a href="Resume.html#Exp">Experience</a></li>
+                    <li><a href="Resume.html#Con">Contact</a></li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2>My Interests</h2>
+                <p>Here are some things I enjoy:</p>
+                <ul class="interests-list">
+                    <li>Playing online games</li>
+                    <li>Learning programming</li>
+                    <li>Watching tech videos</li>
+                </ul>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2024 Jose Enrique M. Rodriguez. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        function createSnowflakes() {
+            const snowflakesContainer = document.getElementById('snowflakes');
+            const snowflakeCount = 100;
+            
+            for (let i = 0; i < snowflakeCount; i++) {
+                const snowflake = document.createElement('div');
+                snowflake.classList.add('snowflake');
+                
+                const size = Math.random() * 4 + 2;
+                snowflake.style.width = `${size}px`;
+                snowflake.style.height = `${size}px`;
+                
+                snowflake.style.left = `${Math.random() * 100}vw`;
+                
+                const duration = Math.random() * 10 + 5;
+                snowflake.style.animationDuration = `${duration}s`;
+                
+                snowflake.style.animationDelay = `${Math.random() * 5}s`;
+                
+                snowflakesContainer.appendChild(snowflake);
+            }
+        }
+        
+        window.addEventListener('load', createSnowflakes);
+    </script>
+</body>
+</html>
