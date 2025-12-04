@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <nav>
+                <ul>
+                    <li><a href="Homepage.html">Home</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="main-content">
+            <div class="contact-container">
+                <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" id="contactForm">
+                    <div class="contact-title">
+                        <h2>Compose</h2>
+                        <hr>
+                    </div>
+                    
+                    <input type="hidden" name="access_key" value="bb37225d-8004-4817-9211-87a03b48894d">
+                    
+                    <div class="form-group">
+                        <input type="text" name="name" id="name" placeholder="Your name" class="contact-input" required>
+                        <span class="error-message" id="nameError"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="email" name="email" id="email" placeholder="Your email" class="contact-input" required>
+                        <span class="error-message" id="emailError"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="text" name="subject" id="subject" placeholder="Your subject" class="contact-input" required>
+                        <span class="error-message" id="subjectError"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea name="message" id="message" placeholder="Your message" class="contact-input textarea" required></textarea>
+                        <span class="error-message" id="messageError"></span>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        Submit 
+                        <img src="images/arrow_icon.png" alt="" aria-hidden="true">
+                    </button>
+                </form>
+            </div>
+        </main>
+    </div>
+    
+    <script src="contact.js"></script>
+</body>
+</html>
